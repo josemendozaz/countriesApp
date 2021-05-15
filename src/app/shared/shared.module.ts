@@ -13,7 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 	declarations	: [
 		SidebarComponent,
   		FooterComponent,
-	    NavbarComponent
+		NavbarComponent
   	],
   	imports			: [
 		CommonModule,
