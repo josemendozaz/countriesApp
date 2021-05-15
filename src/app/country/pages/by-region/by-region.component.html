@@ -5,7 +5,7 @@
 	<h5>Seleccione la región</h5>
 
 	<div class="row">
-		<div class="col">
+		<div class="col-12 text-justify">
 			<!-- [class.btn-primary]="region === regionActive" -->
 			<!-- [ngClass]="{
 				'btn-primary' : regionActive === region,
@@ -20,7 +20,7 @@
 		</div>
 
 		<div *ngIf="countries.length > 0" class="row">
-			<div class="col">
+			<div class="col-12 text-justify">
 				<app-countries-table class="table-responsive" [countriesForTable]="countries"></app-countries-table>
 			</div>
 		</div>

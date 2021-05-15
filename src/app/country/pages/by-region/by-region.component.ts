@@ -24,7 +24,7 @@ export class ByRegionComponent implements OnInit {
 	}
 
 	getActiveClassCss( region: string )	: string {
-		return ( region === this.regionActive ) ? 'btn btn-primary' : 'btn btn-outline-primary';
+		return ( region === this.regionActive ) ? 'btn btn-primary m-1' : 'btn btn-outline-primary m-1';
 	}
 
 	activateRegion( region: string )	: void {
