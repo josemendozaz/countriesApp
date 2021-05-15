@@ -5,18 +5,24 @@ import { RouterModule } from '@angular/router';
 
 /* Componentes */
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 /* Declaraciones / Importaciones / Exportaciones */
 @NgModule({
 	declarations	: [
-		SidebarComponent
+		SidebarComponent,
+  		FooterComponent,
+	    NavbarComponent
   	],
   	imports			: [
 		CommonModule,
 		RouterModule
 	],
 	exports			: [
-		SidebarComponent
+		SidebarComponent,
+		FooterComponent,
+		NavbarComponent
 	]
 })
 

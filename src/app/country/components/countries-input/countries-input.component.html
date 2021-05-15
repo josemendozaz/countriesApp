@@ -1,3 +1,3 @@
 <form (ngSubmit)="search()" >
-	<input class="form-control" type="text" name="argument" [(ngModel)]="argument" (input)="keyPress( $event )" [placeholder]="placeholder">
+	<input class="form-control" type="text" name="argument" [(ngModel)]="argument" (input)="keyPress( $event )" [placeholder]="placeholder" autocomplete="off">
 </form>

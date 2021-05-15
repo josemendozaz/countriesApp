@@ -1,15 +1,45 @@
+/* Importaciones */
 import { Component, OnInit } from '@angular/core';
+import { Country } from '../../interfaces/country.interface';
+import { CountryService } from '../../service/country.service';
 
+/* Componente */
 @Component({
 	selector	: 'app-by-region',
 	templateUrl	: './by-region.component.html',
 	styleUrls	: ['./by-region.component.css']
 })
+
+/* Clase */
 export class ByRegionComponent implements OnInit {
 
-	constructor() { }
+	regions			: string[]	= ['africa', 'americas', 'asia', 'europe', 'oceania'];
+	regionActive	: string	= '';
+	isError			: boolean	= false;
+	countries		: Country[]	= [];
 
-	ngOnInit(): void {
+	constructor( private countryService: CountryService ) { }
+
+	ngOnInit()							: void {
+	}
+
+	getActiveClassCss( region: string )	: string {
+		return ( region === this.regionActive ) ? 'btn btn-primary' : 'btn btn-outline-primary';
+	}
+
+	activateRegion( region: string )	: void {
+		if ( region === this.regionActive ) { return; }
+		this.regionActive = region;
+		this.countryService.searchRegion( region )
+		.subscribe( (countries) => {
+			this.countries	= countries;
+			console.log( this.countries );
+		}, (error) => {
+			console.log('error');
+			console.log(error);
+			this.isError	= true;
+			this.countries	= [];
+		});
 	}
 
 }

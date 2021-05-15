@@ -1,17 +1,12 @@
-<!-- <h1>Hello There!</h1> -->
-<!-- <app-by-region></app-by-region>
-<app-by-country></app-by-country>
-<app-by-capital></app-by-capital>
-<app-see-country></app-see-country>
-<app-sidebar></app-sidebar> -->
-
-<div class="container mt-4">
+<app-navbar></app-navbar>
+<div class="container mt-4 content-section">
 	<div class="row">
-		<div class="col-3">
+		<div class="col-12 col-sm-12 col-md-3 col-lg-3 mt-2 mb-2">
 			<app-sidebar></app-sidebar>
 		</div>
-		<div class="col">
+		<div class="col-12 col-sm-12 col-md-9 col-lg-9 mt-2 mb-2">
 			<router-outlet></router-outlet>
 		</div>
 	</div>
 </div>
+<app-footer></app-footer>

@@ -13,9 +13,14 @@ import { CountryService } from '../../service/country.service';
 /* Clase */
 export class ByCountryComponent {
 
-	argument	: string	= 'Hello There';
-	isError		: boolean	= false;
-	countries	: Country[]	= [];
+	argument			: string	= 'Hello There';
+	isError				: boolean	= false;
+	countries			: Country[]	= [];
+	suggestedCountries	: Country[]	= [];
+	showSuggestion		: boolean	= false;
+
+
+
 
 	constructor( private countryService: CountryService ) { }
 
@@ -39,9 +44,30 @@ export class ByCountryComponent {
 	}
 
 	suggestion( argument: string )		: void {
-		this.isError	= false;
+
+		this.isError		= false;
+		this.argument		= argument;
+		this.showSuggestion	= true;
 		console.log('object');
-		/* TODO: crear sugerencias */
+		this.countryService.searchCountry( argument )
+		.subscribe(
+			countries => this.suggestedCountries = countries.splice(0, 5),
+		 	(error) => {
+				this.countries		= [];
+				this.showSuggestion	= false;
+			}
+		);
+
+	}
+
+	searchSuggested( argument: string )		: void {
+		this.searchCountry( argument );
+		this.showSuggestion	= false;
+	}
+
+
+	closeSuggestion()						: void {
+		this.showSuggestion = false;
 	}
 
 }
