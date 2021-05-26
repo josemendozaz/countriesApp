@@ -1,10 +1,13 @@
 # CountriesApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
+Proyecto de practica que muestra Listado/Visualización de Paises y Capitales, la aplicación se alimenta de consultas a la API de [REST Countries](http://restcountries.eu/). El proyecto es una practica del curso de Angular 11 version 2021 del Instructor Fernando Herrera. El proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
 
-## Development server
+### 📋 Pre-requisitos
+* Tener instalado nodejs [NODEJS V14.16](https://nodejs.org/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Development server (Entorno de desarrollo)
+
+Correr en consola dentro del directorio del proyecto el comando `ng serve`. Una vez realizando el bundle navegar a la dirección `http://localhost:4200/`. La aplicación realiza una recarga automatica al realizar un cambio en los archivos fuentes.
 
 ## Code scaffolding
 
@@ -25,3 +28,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## ✒️ Autor 
+* **Fernando Herrera** - *Trabajo Inicial* - [Klerith](https://github.com/Klerith)
+* **José Mendoza** - *Realizador de la tarea HeroesApp dictada por Fernando Herrera* - [josemendozaz](https://github.com/josemendozaz)
